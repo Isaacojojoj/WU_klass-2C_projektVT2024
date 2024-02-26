@@ -2,15 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    /* --burgerline_width: 30px;
+    --burgerline_width: 30px;
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
-    
-    --background_color: lightseagreen; */
+    --background_color: lightseagreen;
 }
 
-/* .wrapper {
+
+ .wrapper {
     height: 100vh;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -20,41 +19,47 @@
         "nav"
         "se1"
         "foo";
-} */
+}
 
 
 header{
     display: flex;
     justify-content: center;
     justify-items: center;
-    font-family: cursive;
-    font-size: 300px;
+    height: 60px;
+    width: auto;
+    font-size: 50px;
+    font-family: "Micro 5", sans-serif;
+
 }
 
-body {
-    background: grey;
+#link_list{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: auto;
+    font-size: 30px;
+    font-family: "Micro 5", sans-serif;
+    text-decoration: none;
 }
 
 nav {
-    height: 100px;
-    width: 100%;
+    height: 70px;
+    width: auto;
     background-color: var(--background_color);
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-items: center;
     font-family: 'Courier New', Courier, monospace;
     border-bottom: 2px solid grey;
 }
 
-ul{
-    font-size: large;
-    text-decoration: none;
-}
 
 main {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 250px 200px 250px 450px minmax(250px, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr minmax(250px,  1fr 1fr 1fr);
     grid-template-areas:
         "welcome_"
         "section4"
@@ -65,21 +70,8 @@ main {
     background: grey;
 }
 
-article {
-    padding: 30px;
-}
 
-h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2rem;
-}
-
-h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-}
-
-
+/* styling av klass */
 .links_visible {
     transform: translateY(500px);
 }
@@ -93,17 +85,9 @@ h2 {
     transition: all 0.5s;
 }
 
-.arrow_img {
-    width: 50px;
-    height: auto;
-    margin: 10px;
-} 
-
-.article_text {
-    font-size: 1rem;
-}
 
 
+/* styling av id */
 #link_list {
     background: var(--background_color);
     display: flex;
@@ -172,34 +156,14 @@ h2 {
     padding: 20px;
 }
 
-#gallery_img {
-    width: 250px;
-    height: auto;
-}
-
-#coffee_maker {
-    width: 200px;
-    height: auto;
-}
 
 #image_gallery {
     display: flex;
     align-items: flex-end;
 }
 
-#cups_served {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-    margin: 30px;
-}
 
-#gallery_text {
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-
+/* styling av flera selektorer, hover mm */
 #link_list a {
     text-decoration: none;
     color: rgb(255, 128, 0);
@@ -240,9 +204,10 @@ h2 {
 }
 
 
+/* styling som börjar gälla för skärmar med bredd 800px eller mer*/
 @media screen and (min-width: 800px) {
 
-
+/* styling av taggar */
 
 main {
     height: calc(100vh - 100px);
@@ -254,17 +219,8 @@ main {
         "section4 section4";
 }
 
-article {
-    margin: 30px;
-    width: 600px;
-}
 
-h1 {
-    font-size: 3rem;
-}
-
-
-
+/* styling av id */
 #link_list {
     flex-direction: row;
     height: 100px;
@@ -273,17 +229,14 @@ h1 {
     border-bottom: 2px solid grey;
 }
 
-
+/* styling av klass */
 .links_visible {
     transform: translateY(0px);
 }
 
-.article_text {
-    font-size: 1.5rem;
-}
 
 
-
+/* styling av flera selektorer, hover mm */
 #link_list a:hover {
     background: var(--background_color);
     color: rgb(255, 128, 0);
@@ -295,4 +248,3 @@ h1 {
 }
 
 }
-

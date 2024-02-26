@@ -3,19 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 
-    --burgerline_width: 30px;
+    /* --burgerline_width: 30px;
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
     
-    --background_color: lightseagreen;
+    --background_color: lightseagreen; */
 }
 
-/* styling av taggar */
+/* .wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr minmax(20px, 60px);
+    grid-template-areas: 
+        "hea"
+        "nav"
+        "se1"
+        "foo";
+} */
+
 
 header{
     display: flex;
     justify-content: center;
     justify-items: center;
+    font-family: cursive;
+    font-size: 300px;
 }
 
 body {
@@ -33,6 +46,10 @@ nav {
     border-bottom: 2px solid grey;
 }
 
+ul{
+    font-size: large;
+    text-decoration: none;
+}
 
 main {
     display: grid;
@@ -63,7 +80,6 @@ h2 {
 }
 
 
-/* styling av klass */
 .links_visible {
     transform: translateY(500px);
 }
@@ -87,7 +103,7 @@ h2 {
     font-size: 1rem;
 }
 
-/* styling av id */
+
 #link_list {
     background: var(--background_color);
     display: flex;
@@ -183,7 +199,7 @@ h2 {
     margin-top: 10px;
 }
 
-/* styling av flera selektorer, hover mm */
+
 #link_list a {
     text-decoration: none;
     color: rgb(255, 128, 0);
@@ -224,10 +240,9 @@ h2 {
 }
 
 
-/* styling som börjar gälla för skärmar med bredd 800px eller mer*/
 @media screen and (min-width: 800px) {
 
-/* styling av taggar */
+
 
 main {
     height: calc(100vh - 100px);
@@ -249,7 +264,7 @@ h1 {
 }
 
 
-/* styling av id */
+
 #link_list {
     flex-direction: row;
     height: 100px;
@@ -258,7 +273,7 @@ h1 {
     border-bottom: 2px solid grey;
 }
 
-/* styling av klass */
+
 .links_visible {
     transform: translateY(0px);
 }
@@ -268,7 +283,7 @@ h1 {
 }
 
 
-/* styling av flera selektorer, hover mm */
+
 #link_list a:hover {
     background: var(--background_color);
     color: rgb(255, 128, 0);
@@ -280,3 +295,4 @@ h1 {
 }
 
 }
+

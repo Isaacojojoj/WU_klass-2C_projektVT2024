@@ -12,202 +12,58 @@
  .wrapper {
     height: 100vh;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr minmax(20px, 60px);
     grid-template-areas: 
         "hea"
         "nav"
-        "se1"
+        "sec"
         "foo";
 }
 
 
+
 header{
-    display: flex;
     justify-content: center;
     justify-items: center;
+    align-items: center;
+    align-content: center;
     height: 60px;
     width: auto;
     font-size: 50px;
     font-family: "Micro 5", sans-serif;
-
+    background-color: red;
+    grid-area: hea;
 }
 
-#link_list{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    width: auto;
-    font-size: 30px;
-    font-family: "Micro 5", sans-serif;
-    text-decoration: none;
+
+body{
+    background-color:brown ;
 }
 
 nav {
+    display: flex;
     height: 70px;
     width: auto;
     background-color: var(--background_color);
-    display: flex;
     align-items: center;
     justify-items: center;
     font-family: 'Courier New', Courier, monospace;
-    border-bottom: 2px solid grey;
-}
-
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr minmax(250px,  1fr 1fr 1fr);
-    grid-template-areas:
-        "welcome_"
-        "section4"
-        "section2"
-        "section3" 
-        "section1";
-    gap: 2px;
-    background: grey;
-}
-
-
-/* styling av klass */
-.links_visible {
-    transform: translateY(500px);
-}
-
-.burger_line {
-    width: var(--burgerline_width);
-    height: var(--burgerline_height);
-    margin: var(--burgerline_margin);
-    background: darkgreen;
-    border-radius: 20%;
-    transition: all 0.5s;
-}
-
-
-
-/* styling av id */
-#link_list {
-    background: var(--background_color);
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    position: absolute;
-    top: -400px;
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-    z-index: 1;
-    border: 1px solid grey;
-}
-
-#burger {
-    margin-right: 80px;
-    cursor: pointer;
-}
-
-#section_1 {
-    grid-area: section1;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#section_2 {
-    grid-area: section2;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#section_3 {
-    grid-area: section3;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#section_4 {
-    grid-area: section4;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#welcome {
-    grid-area: welcome_;
-    background: var(--background_color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-}
-
-
-#image_gallery {
-    display: flex;
-    align-items: flex-end;
-}
-
-
-/* styling av flera selektorer, hover mm */
-#link_list a {
+    background-color: olive;
     text-decoration: none;
-    color: rgb(255, 128, 0);
-    font-weight: bold;
-    font-size: 1.25rem;
-    letter-spacing: 0.1875rem;
-    text-transform: uppercase;
-    width: 200px;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 1rem;
+    grid-area: nav;
 }
 
-#link_list a:hover {
-    background: grey;
-    color: black;
+footer{
+background-color: yellowgreen;
+justify-content: center;
+justify-items: center;
+grid-area: foo;
 }
 
-.burger_in_x_form #burger_line_2 {
-    opacity: 0;
-}
-
-.burger_in_x_form #burger_line_1 {
-    transform: translateY(calc(var(--burgerline_height) + var(--burgerline_margin))) rotate(45deg);
-}
-
-.burger_in_x_form #burger_line_3 {
-    transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
-}
-
-.arrow_img:hover {
-    cursor: pointer;
-}
-
-#coffee_maker:hover {
-    cursor: pointer;
-}
-
-
-/* styling som börjar gälla för skärmar med bredd 800px eller mer*/
 @media screen and (min-width: 800px) {
 
-/* styling av taggar */
 
 main {
     height: calc(100vh - 100px);

@@ -3,18 +3,112 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     --burgerline_width: 30px;
     --burgerline_height: 6px;
-    --burgerline_margin: 5px;
-    
+    --burgerline_margin: 5px;  
     --background_color: lightseagreen;
+      transition: 0.5s;
 }
 
-.doftnoter{
-    height: 12.5rem;
-    width: auto;
+.Parfymer {
+    display: grid;
+    width: 300px;
+    height: 400px;
+    border-radius: 30px;
 }
+
+#main{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    gap: 15px;
+}
+
+#body{
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+
+}
+
+body::before {
+    content: "";
+    background-image: url(img/pannkakor.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.25);
+    z-index: -1;
+}
+
+
+.card{
+    width: 20%;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover{
+    width: 80%;
+}
+
+.card .image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover .image{
+    transform: scale(1.2);
+}
+
+.card .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+    filter: brightness(0.25);
+    opacity: 0;
+}
+
+.card:hover .background{
+    opacity: 1;
+}
+
+.card .layer{
+    width: 100%;
+    height: 50%;
+    margin-top: -250px;
+    position: relative;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.card .layer .info{
+    width: 260px;
+    position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    opacity: 0;
+}
+
+.card:hover .layer .info{
+    opacity: 1;
+}
+
+.info p{
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 5px;
+}
+
 
 header{
     display: flex;
@@ -51,6 +145,8 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 200px 250px 450px minmax(250px, 1fr);
     grid-template-areas:
+        "section6"
+        "section5"
         "section4"
         "section2"
         "section3" 
@@ -59,22 +155,12 @@ main {
     background: grey;
 }
 
-article {
-    padding: 30px;
-}
-
-h1 {
+ .nottit{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2rem;
-}
-
-h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-}
-
-
-
+    color: azure;
+    font-size: 1.5rem;
+ }
+    
 .links_visible {
     transform: translateY(500px);
 }
@@ -86,16 +172,6 @@ h2 {
     background: darkgreen;
     border-radius: 20%;
     transition: all 0.5s;
-}
-
-.arrow_img {
-    width: 50px;
-    height: auto;
-    margin: 10px;
-} 
-
-.article_text {
-    font-size: 1rem;
 }
 
 
@@ -153,11 +229,22 @@ h2 {
     background: lightseagreen;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+
+}
+
+#section_5{
+    grid-area: section5;
+    height: 100%;
+    background: lightseagreen;
+    display: flex;
+    justify-content: center;
     align-items: center;
+
 }
 
 #welcome {
-    grid-area: welcome_;
+    grid-area: welcome_1;
     background: var(--background_color);
     display: flex;
     flex-direction: column;
@@ -228,8 +315,6 @@ h2 {
 
 @media screen and (min-width: 1000px) {
 
-
-
 main {
     height: calc(100vh - 100px);
     grid-template-columns: 1fr 1fr;
@@ -237,7 +322,8 @@ main {
     grid-template-areas: 
         "welcome_ section1"
         "section2 section3"
-        "section4 section4";
+        "section4 section4"
+        "section5 section6";
 }
 
 h1 {

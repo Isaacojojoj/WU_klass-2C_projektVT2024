@@ -8,8 +8,14 @@
     --burgerline_margin: 5px;  
     --background_color: lightseagreen;
       transition: 0.5s;
+      font-family: 'Courier New', Courier, monospace;
 }
 
+#loga {
+    display: flex-end;
+}
+
+/* Doftnoter */
 .Parfymer {
     display: grid;
     width: 300px;
@@ -18,24 +24,15 @@
     padding: 20px;
 }
 
-#main{
+#mainnoter{
     width: 600px;
     height: 500px;
     display: flex;
-    gap: 15px;   
-}
-
-#body{
-    width: 100%;
-    height: 150vh;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
+    gap: 15px;
 }
 
 body::before {
     content: "";
-    background-image: url(img/pannkakor.jpg);
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -44,7 +41,6 @@ body::before {
     filter: brightness(0.25);
     z-index: -1;
 }
-
 
 .card{
     width: 20%;
@@ -110,38 +106,217 @@ body::before {
     margin-top: 5px;
 }
 
+/* Kontakt */
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card2{
+    width: 325px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px(0,0,0,0,2);
+    margin-top: 20px;
+}
+
+.card2 img{
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+     padding: 16px;
+}
+
+.card-content h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card-content p{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.card-content .btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: white;
+}
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 200px 250px 450px minmax(250px, 1fr);
+    grid-template-areas:
+        "welcome_"
+        "section4"
+        "section2"
+        "section3" 
+        "section1";
+    gap: 2px;
+    /* background: grey; */
+}
+
+article {
+    padding: 30px;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.arrow_img {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+} 
+
+.article_text {
+    font-size: 1rem;
+}
+
+#section_1 {
+    grid-area: section1;
+    width: 300px;
+    height: 400px;
+    background: lightseagreen;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#section_2 {
+    grid-area: section2;
+    width: 300px;
+    height: 400px;
+    background: lightseagreen;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#section_3 {
+    grid-area: section3;
+    height: 100%;
+    background: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#section_4 {
+    grid-area: section4;
+    height: 100%;
+    background: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome {
+    grid-area: welcome_;
+    background: var(--background_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+#gallery_img {
+    width: 250px;
+    height: auto;
+}
+
+#coffee_maker {
+    width: 200px;
+    height: auto;
+}
+
+#image_gallery {
+    display: flex;
+    align-items: flex-end;
+}
+
+#cups_served {
+    font-size: 1rem;
+    margin: 30px;
+}
+
+#gallery_text {
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.arrow_img:hover {
+    cursor: pointer;
+}
+
+#coffee_maker:hover {
+    cursor: pointer;
+}
 
 header{
     display: flex;
     justify-content: center;
     justify-items: center;
-    height: 10rem;
-    grid-area: hea;
-    background-color: rgb(42, 165, 122);
-    align-items: center;
-    align-content: center;
+    height: 20vh;
+    width: auto;
+    background-color: rgb(255, 255, 255);
     font-size: 3rem;
 }
-
+  
 body {
-    background: wheat;
+    background: rgb(255, 255, 255);
 }
 
 nav {
-    height: 150px ;
+    height: 50px ;
     width: 100%;
     background-color: var(--background_color);
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
-    border-bottom: 2px solid grey;
-    grid-area: nav;
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 
+main {
+     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 200px 250px 450px minmax(250px, 1fr);
+    grid-template-areas:
+        "welcome_"
+        "section4"
+        "section2"
+        "section3" 
+        "section1";
+    gap: 2px;
+}
+
  .nottit{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: azure;
     font-size: 1.5rem;
  }
@@ -165,7 +340,7 @@ nav {
     display: flex;
     flex-direction: column;
     height: 400px;
-    /* position: absolute; */
+    position: absolute;
     top: -400px;
     align-items: center;
     justify-content: space-around;
@@ -173,90 +348,6 @@ nav {
     z-index: 1;
     border: 1px solid grey;
 }
-
-#burger {
-    cursor: pointer;
-    /* display: flex;
-    flex-direction: column; */
-
-}
-
-#section_1 {
-    grid-area: section1;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#section_2 {
-    grid-area: section2;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#section_3 {
-    grid-area: section3;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#section_4 {
-    grid-area: section4;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-#section_5{
-    grid-area: section5;
-    height: 100%;
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#welcome {
-    grid-area: welcome_1;
-    background: var(--background_color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-}
-
-
-#coffee_maker {
-    width: 200px;
-    height: auto;
-}
-
-#image_gallery {
-    display: flex;
-    align-items: flex-end;
-}
-
-#gallery_text {
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 10px;
-}
-
 
 #link_list a {
     text-decoration: none;
@@ -289,13 +380,11 @@ nav {
     transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
 }
 
-.arrow_img:hover {
+#burger {
+    margin-right: 80px;
     cursor: pointer;
 }
 
-#coffee_maker:hover {
-    cursor: pointer;
-}
 
 
 
@@ -344,5 +433,6 @@ h1 {
     color: black;
     font-size: 1.5rem;
 }
+
 
 }

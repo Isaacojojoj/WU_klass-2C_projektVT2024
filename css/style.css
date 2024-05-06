@@ -6,23 +6,62 @@
     --burgerline_width: 30px;
     --burgerline_height: 6px;
     --burgerline_margin: 5px;  
-    --background_color: lightseagreen;
       transition: 0.5s;
-      font-family: 'Courier New', Courier, monospace;
 }
 
-#loga {
-    display: flex-end;
+
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* padding: 20px;
+    margin-bottom: 20px; */
+    z-index: 5;
+}
+
+.product img {
+    height: auto;
+    width: 50vh;
+    height: 70vh;
+}
+
+.product h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.product p {
+    margin-top: 5px;
+}
+
+.product .price {
+    font-weight: bold;
+    color: #009688;
+}
+
+.product button {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #00796b;
 }
 
 /* Doftnoter */
-.Parfymer {
-    display: grid;
-    width: 300px;
-    height: 400px;
-    border-radius: 30px;
-    padding: 20px;
-}
+
 
 #mainnoter{
     width: 600px;
@@ -107,7 +146,6 @@ body::before {
 }
 
 /* Kontakt */
-
 .card-container{
     display: flex;
     justify-content: center;
@@ -115,7 +153,7 @@ body::before {
     margin-top: 100px;
 }
 
-.card2{
+.card_2{
     width: 325px;
     background-color: aliceblue;
     border-radius: 8px;
@@ -124,7 +162,7 @@ body::before {
     margin-top: 20px;
 }
 
-.card2 img{
+.card_2 img{
     width: 100%;
     height: auto;
 }
@@ -155,25 +193,6 @@ body::before {
 }
 
 
-
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 250px 200px 250px 450px minmax(250px, 1fr);
-    grid-template-areas:
-        "welcome_"
-        "section4"
-        "section2"
-        "section3" 
-        "section1";
-    gap: 2px;
-    /* background: grey; */
-}
-
-article {
-    padding: 30px;
-}
-
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
@@ -184,21 +203,10 @@ h2 {
     color: black;
 }
 
-.arrow_img {
-    width: 50px;
-    height: auto;
-    margin: 10px;
-} 
-
-.article_text {
-    font-size: 1rem;
-}
-
-#section_1 {
+/* #section_1 {
     grid-area: section1;
     width: 300px;
     height: 400px;
-    background: lightseagreen;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -208,7 +216,6 @@ h2 {
     grid-area: section2;
     width: 300px;
     height: 400px;
-    background: lightseagreen;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -217,7 +224,6 @@ h2 {
 #section_3 {
     grid-area: section3;
     height: 100%;
-    background: lightseagreen;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,100 +233,36 @@ h2 {
 #section_4 {
     grid-area: section4;
     height: 100%;
-    background: lightseagreen;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-#welcome {
-    grid-area: welcome_;
-    background: var(--background_color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-}
-
-#gallery_img {
-    width: 250px;
-    height: auto;
-}
-
-#coffee_maker {
-    width: 200px;
-    height: auto;
-}
-
-#image_gallery {
-    display: flex;
-    align-items: flex-end;
-}
-
-#cups_served {
-    font-size: 1rem;
-    margin: 30px;
-}
-
-#gallery_text {
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-.arrow_img:hover {
-    cursor: pointer;
-}
-
-#coffee_maker:hover {
-    cursor: pointer;
-}
 
 header{
     display: flex;
     justify-content: center;
     justify-items: center;
-    height: 20vh;
+    align-items: center;
+    align-content: center;
+    height: 15vh;
     width: auto;
-    background-color: rgb(255, 255, 255);
     font-size: 3rem;
 }
   
-body {
-    background: rgb(255, 255, 255);
-}
+
 
 nav {
     height: 50px ;
     width: 100%;
-    background-color: var(--background_color);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     border-bottom: 2px solid rgb(0, 0, 0);
+    z-index: 10;
 }
 
 
-main {
-     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 250px 200px 250px 450px minmax(250px, 1fr);
-    grid-template-areas:
-        "welcome_"
-        "section4"
-        "section2"
-        "section3" 
-        "section1";
-    gap: 2px;
-}
-
- .nottit{
-    color: azure;
-    font-size: 1.5rem;
- }
-    
 .links_visible {
     transform: translateY(500px);
 }
@@ -329,14 +271,13 @@ main {
     width: var(--burgerline_width);
     height: var(--burgerline_height);
     margin: var(--burgerline_margin);
-    background: darkgreen;
+    background: black;
     border-radius: 20%;
     transition: all 0.5s;
 }
 
 
 #link_list {
-    background: var(--background_color);
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -346,12 +287,12 @@ main {
     justify-content: space-around;
     list-style: none;
     z-index: 1;
-    border: 1px solid grey;
+    border: 2px solid rgb(0, 0, 0);
 }
 
 #link_list a {
     text-decoration: none;
-    color: rgb(255, 128, 0);
+    color: black;
     font-weight: bold;
     font-size: 1.25rem;
     letter-spacing: 0.1875rem;
@@ -385,7 +326,17 @@ main {
     cursor: pointer;
 }
 
-
+footer{
+    height: 100px ;
+    width: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
 
 
 @media screen and (min-width: 1000px) {
@@ -419,11 +370,6 @@ h1 {
     transform: translateY(0px);
 }
 
-.article_text {
-    font-size: 1.5rem;
-}
-
-
 #link_list a:hover {
     background: var(--background_color);
     color: rgb(255, 128, 0);
@@ -432,6 +378,12 @@ h1 {
 #link_list a {
     color: black;
     font-size: 1.5rem;
+}
+
+#burger {
+    display: none;
+    margin-right: 80px;
+    cursor: pointer;
 }
 
 

@@ -12,11 +12,13 @@
 /* Parfymer */
 
 .container {
-    max-width: 400px;
+    max-width: 40vh;
     margin: 20px auto;
     padding: 0 20px;
-    /* display: flex;
-    flex-direction: row; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    grid-area: container;
 }
 
 
@@ -28,9 +30,8 @@
 }
 
 .product img {
-    height: auto;
-    width: 50vh;
-    height: 70vh;
+    height: 50vh;
+    width: auto;
 }
 
 .product h2 {
@@ -63,8 +64,8 @@
 
 /* Doftnoter */
 #mainnoter{
-    width: 600px;
-    height: 480px;
+    width: 100%;
+    height: 71vh;
     display: flex;
     gap: 15px;
 }
@@ -85,6 +86,7 @@ body::before {
     border-radius: 15px;
     cursor: pointer;
     overflow: hidden;
+    grid-area: card;
 }
 
 .card:hover{
@@ -107,7 +109,7 @@ body::before {
     top: 0;
     z-index: -1;
     width: 100%;
-    height: 125vh;
+    height: 130vh;
     object-fit: cover;
     pointer-events: none;
     filter: brightness(0.75);
@@ -121,7 +123,7 @@ body::before {
 .card .layer{
     width: 100%;
     height: 50%;
-    margin-top: -250px;
+    margin-top: -35vh;
     position: relative;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     
@@ -204,6 +206,7 @@ body::before {
         grid-template-areas:
             "hea hea"
             "nav nav"
+            "art art"
             "section1 section2"
             "section3 section4"
             "section5 section6"
@@ -211,34 +214,32 @@ body::before {
 }
 
 
-/* #kontakt_wrapper{
-    display: grid;
-    height: calc(100vh - 100px);
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-            "hea hea"
-            "nav nav"
-            "foo foo"
+/* article{
+    height: 10vh;
+    width: auto;
+    grid-area: art;
+    display: flex;
+    justify-content: center;
+    font-family: "Pacifico", cursive;
+    font-style: normal;
+    font-size: 1.25rem;
 } */
+
 
 /* #parfymer_wrapper{
     display: grid;
     height: calc(100vh - 100px);
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "hea hea"
-            "nav nav"
-            "section1 section2"
-            "section3 section4"
-            "section5 section6"
+            "hea hea hea"
+            "nav nav nav"
+            "sec1 sec2 sec3"
             "foo foo"
 } */
 
  #section_1 {
     grid-area: section1;
-    margin-top: 50px;
     margin-right: 5px;
     width: auto;
     height: 300px;
@@ -250,7 +251,6 @@ body::before {
 
 #section_2 {
     grid-area: section2;
-    margin-top: 50px;
     margin-left: 5px;
     width: auto;
     height: 300px;
@@ -324,6 +324,7 @@ header{
 
 nav {
     grid-area: nav;
+    margin-bottom: 50px;
     height: 15vh;
     width: 100%;
     display: flex;
@@ -341,8 +342,9 @@ nav {
     flex-direction: row;
     list-style: none;
     align-items: center;
-    justify-content: space-evenly;
+    height: 400px;
 }
+
 
 #link_list a {
     text-decoration: none;
@@ -352,7 +354,11 @@ nav {
     letter-spacing: 0.1875rem;
     text-transform: uppercase;
     margin: 1rem;
-
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #link_list a:hover {
@@ -377,6 +383,21 @@ footer{
 }
 
 
+
+#link_list a:hover {
+    color: rgb(255, 255, 255);
+}
+
+#link_list a {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.links_visible {
+    transform: translateY(0px);
+}
+
+
 @media screen and (max-width: 800px) {
 
 #index_wrapper {
@@ -387,6 +408,7 @@ footer{
     grid-template-areas: 
         "hea"
         "nav"
+        "art"
         "section1"
         "section2"
         "section3"
@@ -394,18 +416,6 @@ footer{
         "section5"
         "section6"
         "foo";
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-ul {
-    display: flex;
-    flex-direction: column;
-    top: 0px;
-    position: absolute;
 }
 
 
@@ -413,51 +423,30 @@ ul {
 #doftnoter_wrapper {
     display: grid;
     height: calc(100vh - 100px);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "hea"
         "nav"
-        "section1"
-        "section2"
-        "section3"
-        "section4"
-        "section5"
-        "section6"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
         "foo";
 }
 
-#kontakt_wrapper {
-    display: grid;
-    height: calc(100vh - 100px);
-    grid-template-columns: 1fr  ;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "hea"
-        "nav"
-        "section1"
-        "section2"
-        "section3"
-        "section4"
-        "section5"
-        "section6"
-        "foo";
-}
 
 #parfymer_wrapper {
     display: grid;
     height: calc(100vh - 100px);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "hea"
         "nav"
-        "section1"
-        "section2"
-        "section3"
-        "section4"
-        "section5"
-        "section6"
+        "container"
         "foo";
 }
 
@@ -466,27 +455,66 @@ h1 {
 }
 
 
-#link_list {
-    flex-direction: row;
-    height: 100px;
-    width: 100%;
-    top: 10rem;
-    border-bottom: 2px solid rgb(0, 0, 0);
+#burger {
+    cursor: pointer;
+    margin-left: 30vh;
 }
-
 
 .links_visible {
-    transform: translateY(0px);
-}
-
-#link_list a:hover {
-    background: var(--background_color);
-    color: rgb(255, 255, 255);
+    transform: translateY(780px);
 }
 
 #link_list a {
-    color: black;
-    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    margin-left: 8vh;
+    /* font-size: 1.5rem; */
 }
+
+
+.burger_line {
+    width: var(--burgerline_width);
+    height: var(--burgerline_height);
+    margin: var(--burgerline_margin);
+    background: black;
+    border-radius: 20%;
+    transition: all 0.5s;
+}
+
+.burger_in_x_form #burger_line_2 {
+    opacity: 0;
+}
+
+.burger_in_x_form #burger_line_1 {
+    transform: translateY(calc(var(--burgerline_height) + var(--burgerline_margin))) rotate(45deg);
+}
+
+.burger_in_x_form #burger_line_3 {
+    transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
+}
+
+#link_list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    position: absolute;
+    top: -400px;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 }

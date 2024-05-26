@@ -9,25 +9,174 @@
       transition: 0.5s;
 }
 
-/* Parfymer */
+#index_wrapper{
+    display: grid;
+    height: calc(100vh - 100px);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "hea hea"
+            "nav nav"
+            "art art"
+            "section1 section2"
+            "section3 section4"
+            "section5 section6"
+            "foo foo"
+}
 
+header{
+    grid-area: hea;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 12.5rem;
+    width: 100%;
+    font-size: 3rem;
+}
+  
+
+
+nav {
+    grid-area: nav;
+    margin-bottom: 50px;
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    background-image: url("../img/farg.jpg");
+    background-size: cover;
+}
+
+#link_list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    height: 400px;
+}
+
+
+#link_list a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 1rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#link_list a:hover {
+    color: rgb(250, 250, 250);
+}
+
+
+.links_visible {
+    transform: translateY(0px);
+}
+
+
+.bilder p {
+    position: absolute;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.bilder img{
+    width: 100%;
+    height: 28rem;
+}
+
+
+
+ #section_1 {
+    grid-area: section1;
+    margin: 5px;
+    width: auto;
+    height: 450px;
+    border: solid 1px black;
+}
+
+#section_2 {
+    grid-area: section2;
+    margin: 5px;
+    width: auto;
+    height: 450px;
+    border: solid 1px black;
+}
+
+#section_3 {
+    grid-area: section3;
+    height: 450px;
+    margin: 5px;
+    width: auto;
+    border: solid 1px black;
+}
+
+#section_4 {
+    grid-area: section4;
+    height: 450px;
+    margin: 5px;
+    width: auto;
+    border: solid 1px black;
+}
+
+#section_5 {
+    grid-area: section5;
+    height: 450px;
+    margin: 5px;
+    width: auto;
+    border: solid 1px black;
+}
+
+#section_6 {
+    grid-area: section6;
+    height: 450px;
+    margin: 5px;
+    width: auto;
+    border: solid 1px black;
+}
+
+
+footer{
+    grid-area: foo;
+    height: 4rem ;
+    border: solid 1.5px #000000;
+    width: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    background-image: url("../img/rainbo.jpg");
+    background-size: cover;
+}
+
+/* Parfymer */
 .container {
-    max-width: 40vh;
+    max-width: 100%;
     margin: 20px auto;
     padding: 0 20px;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-    grid-area: container;
 }
 
-
-.product {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
 
 .product img {
     height: 50vh;
@@ -35,37 +184,16 @@
 }
 
 .product h2 {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.product p {
-    margin-top: 5px;
-}
-
-.product .price {
     font-weight: bold;
-    color: #009688;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
 }
 
-.product button {
-    background-color: #009688;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.product button:hover {
-    background-color: #00796b;
-}
 
 /* Doftnoter */
 #mainnoter{
     width: 100%;
-    height: 71vh;
+    height: 78vh;
     display: flex;
     gap: 15px;
 }
@@ -86,7 +214,6 @@ body::before {
     border-radius: 15px;
     cursor: pointer;
     overflow: hidden;
-    grid-area: card;
 }
 
 .card:hover{
@@ -109,7 +236,7 @@ body::before {
     top: 0;
     z-index: -1;
     width: 100%;
-    height: 130vh;
+    height: 150vh;
     object-fit: cover;
     pointer-events: none;
     filter: brightness(0.75);
@@ -146,6 +273,8 @@ body::before {
     margin-top: 5px;
 }
 
+
+
 /* Kontakt */
 .card-container{
     display: flex;
@@ -159,7 +288,6 @@ body::before {
     background-color: aliceblue;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px(0,0,0,0,2);
     margin-top: 20px;
 }
 
@@ -198,205 +326,6 @@ body::before {
     color: #fff;
 }
 
-#index_wrapper{
-    display: grid;
-    height: calc(100vh - 100px);
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "hea hea"
-            "nav nav"
-            "art art"
-            "section1 section2"
-            "section3 section4"
-            "section5 section6"
-            "foo foo"
-}
-
-
-/* article{
-    height: 10vh;
-    width: auto;
-    grid-area: art;
-    display: flex;
-    justify-content: center;
-    font-family: "Pacifico", cursive;
-    font-style: normal;
-    font-size: 1.25rem;
-} */
-
-
-/* #parfymer_wrapper{
-    display: grid;
-    height: calc(100vh - 100px);
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "hea hea hea"
-            "nav nav nav"
-            "sec1 sec2 sec3"
-            "foo foo"
-} */
-
- #section_1 {
-    grid-area: section1;
-    margin-right: 5px;
-    width: auto;
-    height: 300px;
-    border: solid 1px black;
-    display: flex;
-    background-image: url("../img/passion.jpg");
-    background-size: cover;
-}
-
-#section_2 {
-    grid-area: section2;
-    margin-left: 5px;
-    width: auto;
-    height: 300px;
-    border: solid 1px black;
-    background-image: url("../img/lycka.jpg");
-    background-size: cover;
-
-}
-
-
-#section_3 {
-    grid-area: section3;
-    height: 300px;
-    margin: 5px;
-    width: auto;
-    border: solid 1px black;
-    background-image: url("../img/minnen.jpg");
-    background-size: cover;
-}
-
-#section_4 {
-    grid-area: section4;
-    height: 300px;
-    margin: 5px;
-    width: auto;
-    border: solid 1px black;
-    background-image: url("../img/karlek.jpg");
-    background-size: cover;
-}
-
-#section_5 {
-    grid-area: section5;
-    height: 300px;
-    margin: 5px;
-    width: auto;
-    border: solid 1px black;
-    background-image: url("../img/kansel.jpg");
-    background-size: cover;
-}
-
-#section_6 {
-    grid-area: section6;
-    height: 300px;
-    margin: 5px;
-    width: auto;
-    border: solid 1px black;
-    background-image: url("../img/ro.jpg");
-    background-size: cover;
-}
-
-
-
-.titlar {
-    font-size: 5vh;
-    text-transform: uppercase;
-    color: #fff;
-    font-family: fantasy;
-}
-
-header{
-    grid-area: hea;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    height: 30vh;
-    width: auto;
-    font-size: 3rem;
-}
-  
-
-
-nav {
-    grid-area: nav;
-    margin-bottom: 50px;
-    height: 15vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgb(0, 0, 0);
-    background-image: url("../img/farg.jpg");
-    background-size: cover;
-}
-
-
-
-#link_list {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    align-items: center;
-    height: 400px;
-}
-
-
-#link_list a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.25rem;
-    letter-spacing: 0.1875rem;
-    text-transform: uppercase;
-    margin: 1rem;
-    width: 100%;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-#link_list a:hover {
-    color: rgb(250, 250, 250);
-}
-
-
-
-footer{
-    grid-area: foo;
-    height: 14.5vh ;
-    width: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    background-image: url("../img/rainbo.jpg");
-    background-size: cover;
-}
-
-
-
-#link_list a:hover {
-    color: rgb(255, 255, 255);
-}
-
-#link_list a {
-    color: black;
-    font-size: 1.5rem;
-}
-
-.links_visible {
-    transform: translateY(0px);
-}
-
 
 @media screen and (max-width: 800px) {
 
@@ -420,34 +349,10 @@ footer{
 
 
 
-#doftnoter_wrapper {
-    display: grid;
-    height: calc(100vh - 100px);
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        "hea"
-        "nav"
-        "card"
-        "card"
-        "card"
-        "card"
-        "card"
-        "card"
-        "foo";
-}
-
-
-#parfymer_wrapper {
-    display: grid;
-    height: calc(100vh - 100px);
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        "hea"
-        "nav"
-        "container"
-        "foo";
+.info p{
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 5px;
+    margin-right: 150px;
 }
 
 h1 {
@@ -468,7 +373,6 @@ h1 {
     color: rgb(255, 255, 255);
     background-color: #000000;
     margin-left: 8vh;
-    /* font-size: 1.5rem; */
 }
 
 
@@ -507,6 +411,10 @@ h1 {
     margin: 0;
 }
 
+#mainnoter{
+    height: 910px;
+}
+
 .container {
     max-width: 400px;
     margin: 20px auto;
@@ -515,6 +423,11 @@ h1 {
     flex-direction: column;
 }
 
-
+.product img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
 
 }
